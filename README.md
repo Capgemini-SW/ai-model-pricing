@@ -1,1 +1,116 @@
-# AI Model Pricing Calculator\n\nA comprehensive web application to compare pricing across major AI providers including AWS Bedrock, Azure OpenAI, Google Cloud Vertex AI, OpenAI, and Anthropic.\n\n## Features\n\n### 🧮 Pricing Calculator\n- **Real-time token calculation** from input/output text\n- **47+ AI models** across all major providers\n- **Interactive filtering** by provider (AWS, Azure, OpenAI, Anthropic, GCP)\n- **Professional card design** with scrollable interface\n- **Cost comparison** with live pricing updates\n\n### 🚀 AI Services Hub\n- **23+ AI services** comprehensively covered\n- **Interactive filtering** by service type (Text AI, Image AI, Speech AI)\n- **Modern card-based design** with provider badges\n- **Direct links** to official documentation\n\n## Live Demo\n\n🌐 **[Visit AI Model Pricing Calculator](https://mohitmehral.github.io/ai-model-pricing/)**\n\n## Technology Stack\n\n- **Frontend**: HTML5, CSS3, Vanilla JavaScript\n- **Design**: Modern responsive design with CSS Grid/Flexbox\n- **Deployment**: GitHub Pages\n- **CI/CD**: GitHub Actions\n\n## Local Development\n\n1. Clone the repository:\n```bash\ngit clone https://github.com/mohitmehral/ai-model-pricing.git\ncd ai-model-pricing\n```\n\n2. Open `index.html` in your browser or serve with a local server:\n```bash\n# Using Python\npython -m http.server 8000\n\n# Using Node.js\nnpx serve .\n```\n\n3. Navigate to `http://localhost:8000`\n\n## Project Structure\n\n```\nai-model-pricing/\n├── index.html          # Main pricing calculator page\n├── services.html       # AI services hub page\n├── styles.css          # Main stylesheet\n├── services.css        # Services page stylesheet\n├── script-new.js       # Pricing calculator logic\n├── services.js         # Services page interactions\n├── CODEOWNERS          # Code ownership configuration\n└── .github/\n    └── workflows/\n        ├── auto-pr.yml # Auto PR from dev to main\n        └── deploy.yml  # GitHub Pages deployment\n```\n\n## Contributing\n\n1. Create a feature branch from `dev`:\n```bash\ngit checkout dev\ngit checkout -b feature/your-feature-name\n```\n\n2. Make your changes and commit:\n```bash\ngit add .\ngit commit -m \"Add your feature description\"\n```\n\n3. Push to `dev` branch:\n```bash\ngit push origin dev\n```\n\n4. GitHub Actions will automatically create a PR from `dev` to `main`\n\n## Code Owner\n\n**Mohit Mehral** (@mohitmehral) - Project Owner & Maintainer\n\n## License\n\nMIT License - feel free to use this project for your own purposes.\n\n## Acknowledgments\n\n- Pricing data sourced from official provider documentation\n- Modern UI/UX design principles\n- Responsive design for all devices\n\n---\n\n**Built with ❤️ by Mohit Mehral**
+# AI Model Pricing Calculator
+
+A comprehensive web application to compare pricing across major AI providers including AWS Bedrock, Azure OpenAI, Google Cloud Vertex AI, OpenAI, and Anthropic.
+
+## Features
+
+### 🧮 Pricing Calculator
+- **Real-time token calculation** from input/output text
+- **Provider-specific tokenization** for accurate pricing
+- **47+ AI models** across all major providers
+- **Interactive filtering** by provider (AWS, Azure, OpenAI, Anthropic, GCP)
+- **Professional card design** with scrollable interface
+- **Cost comparison** with live pricing updates
+
+### 🚀 AI Services Hub
+- **23+ AI services** comprehensively covered
+- **Interactive filtering** by service type (Text AI, Image AI, Speech AI)
+- **Modern card-based design** with provider badges
+- **Direct links** to official documentation
+
+## Live Demo
+
+🌐 **[Visit AI Model Pricing Calculator](https://mohitmehral.github.io/ai-model-pricing/)**
+
+## Tokenization Accuracy
+
+Our calculator uses provider-specific tokenization methods for 85-95% pricing accuracy:
+
+- **OpenAI/Azure**: tiktoken library with GPT-4 encoding (cl100k_base)
+- **Anthropic**: ~3.8 chars/token (Claude-optimized approximation)
+- **AWS Bedrock**: ~3.6 chars/token (mixed model families)
+- **Google Cloud**: ~4.2 chars/token (Gemini/PaLM optimized)
+
+*Different providers tokenize the same text differently, affecting actual costs. Hover over model cards to see provider-specific token counts.*
+
+## Technology Stack
+
+- **Frontend**: HTML5, CSS3, Vanilla JavaScript
+- **Design**: Modern responsive design with CSS Grid/Flexbox
+- **Deployment**: GitHub Pages
+- **CI/CD**: GitHub Actions
+
+## Local Development
+
+1. Clone the repository:
+```bash
+git clone https://github.com/mohitmehral/ai-model-pricing.git
+cd ai-model-pricing
+```
+
+2. Open `index.html` in your browser or serve with a local server:
+```bash
+# Using Python
+python -m http.server 8000
+
+# Using Node.js
+npx serve .
+```
+
+3. Navigate to `http://localhost:8000`
+
+## Project Structure
+
+```
+ai-model-pricing/
+├── index.html          # Main pricing calculator page
+├── services.html       # AI services hub page
+├── styles.css          # Main stylesheet
+├── services.css        # Services page stylesheet
+├── script-new.js       # Pricing calculator logic
+├── services.js         # Services page interactions
+├── CODEOWNERS          # Code ownership configuration
+└── .github/
+    └── workflows/
+        ├── auto-pr.yml # Auto PR from dev to main
+        └── deploy.yml  # GitHub Pages deployment
+```
+
+## Contributing
+
+1. Create a feature branch from `dev`:
+```bash
+git checkout dev
+git checkout -b feature/your-feature-name
+```
+
+2. Make your changes and commit:
+```bash
+git add .
+git commit -m "Add your feature description"
+```
+
+3. Push to `dev` branch:
+```bash
+git push origin dev
+```
+
+4. GitHub Actions will automatically create a PR from `dev` to `main`
+
+## Code Owner
+
+**Mohit Mehral** (@mohitmehral) - Project Owner & Maintainer
+
+## License
+
+MIT License - feel free to use this project for your own purposes.
+
+## Acknowledgments
+
+- Pricing data sourced from official provider documentation
+- Modern UI/UX design principles
+- Responsive design for all devices
+
+---
+
+**Built with ❤️ by Mohit Mehral**
